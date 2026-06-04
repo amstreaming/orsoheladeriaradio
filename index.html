@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
 
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Orso Heladería Radio</title>
+
+<meta property="og:title" content="Orso Heladería Radio">
+<meta property="og:description" content="Escucha nuestra señal en vivo">
+<meta property="og:image" content="https://amstreaming.github.io/orsoheladeriaradio/share.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://amstreaming.github.io/orsoheladeriaradio/">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Orso Heladería Radio">
+<meta name="twitter:description" content="Escucha nuestra señal en vivo">
+<meta name="twitter:image" content="https://amstreaming.github.io/orsoheladeriaradio/share.png">
+
+<style>
+
+body{
+background:#000;
+color:white;
+font-family:Arial,sans-serif;
+text-align:center;
+padding:20px;
+padding-top:70px;
+}
+
+.logo{
+display:block;
+margin:0 auto;
+width:100%;
+max-width:550px;
+height:auto;
+}
+
+@media (max-width:768px){
+
+body{
+padding:15px;
+}
+
+h1{
+font-size:26px;
+}
+
+p{
+font-size:18px;
+}
+
+.logo{
+width:100%;
+max-width:100%;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div style="height:80px;"></div>
+
+<img src="logo.png" class="logo">
+
+<script id='sonic_js' data-port='8002' src='https://stream6.hcnetwork.net/cp/widgets.js?r=939'></script>
+
+<audio controls autoplay style="width:100%;max-width:450px;">
+    <source src="https://stream6.hcnetwork.net:8002/stream" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+</audio>
+
+<h2>Oyentes conectados</h2>
+
+<div id='sonic_listeners'></div>
+
+</body>
+</html>
