@@ -313,7 +313,8 @@
           .then(function(r){ return r.json(); })
           .then(function(data){
             if(!data) return;
-            var n = (typeof data.unique === 'number') ? data.unique
+            var n = (typeof data.total === 'number') ? data.total
+                  : (typeof data.unique === 'number') ? data.unique
                   : (typeof data.now === 'number') ? data.now : null;
             if(n !== null) countEl.textContent = n;
           })
@@ -380,7 +381,7 @@
         }
         fetchNowPlaying();
         clearInterval(pollTimer);
-        pollTimer = setInterval(fetchNowPlaying, 5000);
+        pollTimer = setInterval(fetchNowPlaying, 3000);
       });
       audio.addEventListener('waiting', function(){
         if(!audio.paused && player.dataset.state !== 'reconnecting') setState('loading');
@@ -411,7 +412,7 @@
       });
 
       fetchNowPlaying();
-      setInterval(fetchNowPlaying, 5000);
+      setInterval(fetchNowPlaying, 3000);
 
       // ---- autoplay al cargar, igual que la página anterior de GitHub ----
       // el navegador puede bloquearlo en la primera visita sin interacción
